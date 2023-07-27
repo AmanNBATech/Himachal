@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<style>
+  .imggg{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .para,p{
+    text-align: justify;
+    font-family: cursive;
+  }
+  h1{
+    font-family: cursive;
+  }
+  h2{
+    text-align: center;
+    font-family: cursive;
+  }
+  
+</style>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-8">
+      <h1>{{bese.name}}</h1>
+      <img src="{{bese.img.url}}" class="imggg" alt="">
+      <p class="para" >
+        <h2>About this trek</h2>
+        {{bese.description}}
+        <h1>Elevation-:{{bese.ele}}</h1>
+        <h1>Level-:{{bese.level}}</h1>
+        <h1>Time To Visit-:{{bese.ime}}</h1>
+      </p>
+    </div>
+    <div class="col-lg-4">
+
+      <div class="box my-5 border text-center">
+        <button class="btn btn-outline-danger my-2 ">Delete</button>
+        <a href="{% url 'up' bese.id %}" class="btn btn-outline-primary my-2">Update</a> <br>
+       
+      
+            <button class="btn btn-outline-success my-2 " type="submit">Comment</button> <br>
+       
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
