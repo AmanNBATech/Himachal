@@ -3,7 +3,7 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
-image = CloudinaryField('image ')
+# image = CloudinaryField('image ')
 
 
 class trek(models.Model):
